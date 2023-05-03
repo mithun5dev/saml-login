@@ -273,41 +273,41 @@ export class LoginPage implements OnInit {
                         //   console.log('Api Error handler: ', JSON.stringify(error));
                         // });
                         //this.openWindow();
-                        var cookie = localStorage.getItem('cookie');;
+                    //     var cookie = localStorage.getItem('cookie');;
                       
-                        const myInit = {
-                          method: "POST",
-                          headers: {
-                            Accept: "application/json",
-                            Cookie: cookie,
-                            'X-CSRF-Token':this.csrfToken,
-                            'Content-type':"application/json",
+                    //     const myInit = {
+                    //       method: "POST",
+                    //       headers: {
+                    //         Accept: "application/json",
+                    //         Cookie: cookie,
+                    //         'X-CSRF-Token':this.csrfToken,
+                    //         'Content-type':"application/json",
                             
                     
-                          },
-                          mode: "cors",
-                          cache: "default",
-                        };
-                        const myHeaders = new Headers();
-                        myHeaders.append("Accept", "application/json");
-                        myHeaders.append("Content-type", "application/json");
-                        myHeaders.append("X-CSRF-Token", this.csrfToken);
-                        myHeaders.append("Cookie", cookie);
+                    //       },
+                    //       mode: "cors",
+                    //       cache: "default",
+                    //     };
+                    //     const myHeaders = new Headers();
+                    //     myHeaders.append("Accept", "application/json");
+                    //     myHeaders.append("Content-type", "application/json");
+                    //     myHeaders.append("X-CSRF-Token", this.csrfToken);
+                    //     myHeaders.append("Cookie", cookie);
                     
-                        const myInit2 = {
-                          method: "GET",
-                          headers: myHeaders,
+                    //     const myInit2 = {
+                    //       method: "GET",
+                    //       headers: myHeaders,
                           
-                        };
+                    //     };
                     
-                    var myRequest = new Request(window.WebviewProxy.convertProxyUrl('https://tatatest.resustain.io/users/sign_in.json'));
+                    // var myRequest = new Request(window.WebviewProxy.convertProxyUrl('https://tatatest.resustain.io/users/sign_in.json'));
                     
                     
-                     fetch(myRequest,myInit2).then((response) => {
+                    //  fetch(myRequest,myInit2).then((response) => {
                       
-                      console.log("fetch response",response);
-                      console.debug("fetch response",response);
-                    });
+                    //   console.log("fetch response",response);
+                    //   console.debug("fetch response",response);
+                    // });
                         const httpOptions1 = {
                           headers: {
                             'Content-Type': 'application/json',
@@ -346,41 +346,41 @@ export class LoginPage implements OnInit {
                       //   });
                       //}, 3000);
                      console.log('Headers----->', headers2);
-                  // this.ionicHTTP.post('https://tatatest.resustain.io/users/sign_in.json',obj,headers2).then(res => {
-                  //    console.log('from url response--->', JSON.stringify(res)); 
-                  //       let respData = null;
-                  //     if (res instanceof Object) {
+                  this.ionicHTTP.post('https://tatatest.resustain.io/users/sign_in.json',obj,headers2).then(res => {
+                     console.log('from url response--->', JSON.stringify(res)); 
+                        let respData = null;
+                      if (res instanceof Object) {
                           
-                  //         respData = this.IsJsonString(res.data) ? JSON.parse(res.data) : respData.data;
-                  //         console.log('from url response- data -->', JSON.stringify(respData)); 
+                          respData = this.IsJsonString(res.data) ? JSON.parse(res.data) : respData.data;
+                          console.log('from url response- data -->', JSON.stringify(respData)); 
               
-                  //           const userData = res.data.body || {};
-                  //           this.apiResources.setCurrentUser(userData);
-                  //           console.log('unitss--->', res);
-                  //           console.log('unitss--->', this.apiResources.getCurrentUser());
-                  //           localStorage.setItem('email', this.apiResources.getCurrentUser().email);
-                  //           //localStorage.setItem('password', loginData.password);
-                  //           this.offlineDB.addCurrentUser(this.apiResources.getCurrentUser()._id, this.apiResources.getCurrentUser().email, userData).then((currentUser) => {
-                  //             console.log("current user stored offline --->", currentUser);
-                  //             // OneSignal.setExternalUserId(this.apiResources.getCurrentUser().email);
-                  //             // OneSignal.disablePush(false);
+                            const userData = res.data.body || {};
+                            this.apiResources.setCurrentUser(userData);
+                            console.log('unitss--->', res);
+                            console.log('unitss--->', this.apiResources.getCurrentUser());
+                            localStorage.setItem('email', this.apiResources.getCurrentUser().email);
+                            //localStorage.setItem('password', loginData.password);
+                            this.offlineDB.addCurrentUser(this.apiResources.getCurrentUser()._id, this.apiResources.getCurrentUser().email, userData).then((currentUser) => {
+                              console.log("current user stored offline --->", currentUser);
+                              // OneSignal.setExternalUserId(this.apiResources.getCurrentUser().email);
+                              // OneSignal.disablePush(false);
               
-                  //             localStorage.setItem('username', this.apiResources.getCurrentUser().email);
-                  //             localStorage.setItem('samllogin', 'yes');
-                  //             this.loadingController.dismiss();
-                  //             this.router.navigateByUrl('/dashboard');
-                  //           }, error => {
-                  //             console.log(JSON.stringify(error));
-                  //           });
-                  //       }
+                              localStorage.setItem('username', this.apiResources.getCurrentUser().email);
+                              localStorage.setItem('samllogin', 'yes');
+                              this.loadingController.dismiss();
+                              this.router.navigateByUrl('/dashboard');
+                            }, error => {
+                              console.log(JSON.stringify(error));
+                            });
+                        }
                         
                        
-                  //         // this.router.navigateByUrl('/menu/dashboard-page');  
-                  //       }, err => {
-                  //         console.log("ERROR Token",JSON.stringify(err));
-                  //         //this.samlLoginMethod();
+                          // this.router.navigateByUrl('/menu/dashboard-page');  
+                        }, err => {
+                          console.log("ERROR Token",JSON.stringify(err));
+                          //this.samlLoginMethod();
                          
-                  //       });
+                        });
                       }, 3000);
                       }, 2000);
                 }, 5000);
