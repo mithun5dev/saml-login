@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "124871157888",
+    "project_id": "resustain-8d53c",
+    "storage_bucket": "resustain-8d53c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124871157888:android:265827c55a66640d629e65",
+        "android_client_info": {
+          "package_name": "com.tcl.resustain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124871157888-n7tmcdahjb5ldeei9jiu2s07nl6kdl7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tcl.resustain",
+            "certificate_hash": "8a97ad52ba37f15de437faa263ee04809998eef0"
+          }
+        },
+        {
+          "client_id": "124871157888-jmjcnv2lh1q3vdqn3h8tpvf25g6p17bt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT5Wg3rrPgcV51J8qGRsAHkOjRHOuwlGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124871157888-jmjcnv2lh1q3vdqn3h8tpvf25g6p17bt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,220 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+html,
+body {
+
+	word-wrap: break-word;
+	font-size: 14px;
+	font-family: -apple-system;
+	font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+	line-height: 20px;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: transparent;
+	text-size-adjust: none;
+	-webkit-font-smoothing: 'antialiased';
+	--ion-default-font: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif !important;
+	background: #fff;
+}
+
+.bar-calm {
+	--background: var(--app-primary-color);
+	//height: 44px;
+	display: flex;
+	align-items: center;
+	--ion-safe-area-top: 20;
+	.bar-title {
+		// width:;
+		padding: 15px;
+		float: left;
+		align-content: auto;
+		text-align: left;
+		align-content: left;
+		color: var(--app-highlited-text);
+		font-size: var(--ion-header-font-size);
+	}
+}
+.bar-cat {
+	--background: var(--app-primary-color);
+	//height: 44px;
+	display: flex;
+	
+	--ion-safe-area-top: 20;
+	.bar-title {
+		// width:;
+		padding: 15px;
+		float: left;
+		align-content: auto;
+		text-align: left;
+		align-content: left;
+		color: var(--app-highlited-text);
+		font-size: var(--ion-header-font-size);
+	}
+}
+.btn-style {
+	--background: var(--app-primary-color);
+}
+ion-button {
+	text-transform: none;
+}
+.menu-btn-title {
+	color: var(--app-highlited-text);
+}
+.leftBorder {
+	border-left: 0px solid #fff;
+}
+
+.leftBorder h5 {
+	color: grey;
+}
+.energised,
+.energized {
+	color: var(--energised-color);
+}
+.filter-btn {
+	color: var(--app-highlited-text);
+	margin-right: 10px;
+	zoom: 1.5;
+}
+.tickStyle {
+	zoom: 1.5;
+}
+.subheader-bar-calm {
+	--background: var(--energised-color);
+	height: 44px;
+	display: flex;
+	align-items: center;
+	.subheader-bar-title {
+		padding: 10px;
+		float: left;
+		align-content: auto;
+		text-align: left;
+		align-content: left;
+		color: var(--app-highlited-text);
+	}
+}
+
+.white-text {
+	color: var(--app-highlited-text);
+}
+// html,ion-label{
+//    font-family:  "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+// }
+
+.assertive,
+a.assertive {
+	color: #ef473a;
+}
+
+.assertive-bg {
+	background-color: #ef473a;
+}
+
+.assertive-border {
+	border-color: #e42112;
+}
+
+.component-styling {
+	font-size: var(--normal-text-size);
+	color: var(--menu-text-color);
+	padding: 5px 5px 5px 15px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+ionic-selectable-modal {
+	.toolbar-label {
+		--background: var(--app-primary-color);
+		color: var(--app-highlited-text);
+	}
+	.toolbar-searchbar {
+		ion-searchbar {
+			--background: var(--border-color);
+		}
+	}
+}
+
+.errorMessage{
+  color:red;
+}
+
+//action-sheet-controller
+.action-sheet-title{
+	border-bottom: 1px solid black;
+	text-align: center !important;
+}
+.action-sheet-icon{
+	--color: #33cd5f;;
+}
+.action-sheet-button-inner{
+	color: #007aff;
+}
+ion-slide{
+	display: block
+}
+
+
+.new-card{
+	margin: 0;
+}
+.title-header{
+	width:280px;
+}
+.title-sub-header{
+	width:240px;
+}
+.ion-text-wrap{
+	pointer-events: visible !important;
+	color:#737373
+  }
+// .sc-ion-loading-md-h{
+// 	background: #f2f2f2;
+// 	max-width:280px;
+// 	max-height:90%;
+// 	spinner-color:var(--app-primary-color);
+// 	backdrop-opacity:0.32;
+// 	color:#262626;
+// 	font-size : 14px;
+	
+// }
+// 	.item-ionic-selectable .ionic-selectable {
+//     display: -webkit-box;
+//     display: -webkit-flex;
+//     display: -ms-flexbox;
+//     display: flex;
+//     max-width: 100%;
+//     flex: 1;
+// }
+// .ios{
+//     .bar-title{
+//         padding-left: 55px;
+//     }
+//     .menu-btn-title{
+//         ion-menu-button{
+//             color: var(--app-highlited-text);
+//         }
+//     }
+// }

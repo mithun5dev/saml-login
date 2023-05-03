@@ -1,0 +1,17 @@
+{
+  "name": "Resustain",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "https://tclcentos.resustain.io" 
+    },
+    {
+      "path": "/",
+      "proxyUrl": "https://tclcentos.resustain.io"
+    }
+  ]
+}

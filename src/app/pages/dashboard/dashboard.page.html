@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar mode="md" class="bar-calm">
+    <ion-menu-button mode="md" class="menu-btn-title" slot="start"> <ion-menu-button></ion-menu-button></ion-menu-button>
+    <ion-title mode="md" class="bar-title title-header">Home</ion-title>
+    <!-- <ion-buttons slot="end" (click)="openNotifications()">
+      <ion-icon class="menu-btn-title  zoom-style" name="notifications" size="small"></ion-icon>
+    </ion-buttons>  -->
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content>
+  <section style="padding:10px;text-align:center">
+    <img style="height:80px" src="assets/img/resusdash.png">
+    <p style="font-size:2em;padding:10px;text-align:center" >Welcome to Resustain<br>
+    </p>
+  </section>
+  <ion-toolbar>
+    <ion-item button (click)="logout()" expand="block">
+        <ion-icon name="power"></ion-icon>
+        <ion-label>Sign out</ion-label>
+     
+  </ion-item>
+  </ion-toolbar>
+ 
+</ion-content>
+<ion-footer style="text-align:center" mode="md">
+  <span style="background: white;">
+    <img style="padding-left:60px;padding-right:60px;padding-top:10px;padding-bottom:10px;" src="assets/img/tatalogo.png">
+  </span>
+  <span style="background: white;">
+    <ion-label style="text-align:center">Version: 0.0.1</ion-label>
+  </span>
+</ion-footer>

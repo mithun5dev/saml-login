@@ -1,0 +1,13 @@
+p {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    padding:10px;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    .icon-style{
+        color: var(--error-display-color);
+        zoom:1.5
+    }
+}
