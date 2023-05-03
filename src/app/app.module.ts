@@ -39,6 +39,7 @@ import { LocationAccuracy } from '@ionic-native/location-accuracy/ngx';
 import { LocationServiceService } from 'src/app/common/services/location-service.service';
 import { Diagnostic } from '@ionic-native/diagnostic/ngx'
 
+
 //import { OneSignal } from '@ionic-native/onesignal/ngx';
 //import OneSignal from 'onesignal-cordova-plugin';
 @NgModule({

@@ -7,11 +7,12 @@
   "proxies": [
     {
       "path": "/",
-      "proxyUrl": "https://tclcentos.resustain.io" 
+      "proxyUrl": "https://tatatest.resustain.io" 
     },
+   
     {
       "path": "/",
-      "proxyUrl": "https://tclcentos.resustain.io"
+      "proxyUrl": "https://tatatest.resustain.io"
     }
   ]
 }

@@ -20,6 +20,15 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="scheme" value="https" />
+    <preference name="hostname" value="tatatest.resustain.io" />
+    <preference name="WKWebViewOnly" value="true" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="AllowBackForwardNavigationGestures" value="true" />
+    <preference name="Allow3DTouchLinkPreview" value="false" />
     <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:requestLegacyExternalStorage="true" android:usesCleartextTraffic="true" />
@@ -92,6 +101,68 @@
         <splash height="2208" src="resources/ios/splash/Default-736h.png" width="1242" />
         <splash height="2436" src="resources/ios/splash/Default-2436h.png" width="1125" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
+        <icon height="216" src="resources/ios/icon/icon-108@2x.png" width="216" />
+        <splash height="2688" src="resources/ios/splash/Default-2688h~iphone.png" width="1242" />
+        <splash height="1242" src="resources/ios/splash/Default-Landscape-2688h~iphone.png" width="2688" />
+        <splash height="1792" src="resources/ios/splash/Default-1792h~iphone.png" width="828" />
+        <splash height="828" src="resources/ios/splash/Default-Landscape-1792h~iphone.png" width="1792" />
+        <custom-config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Please allow access to camera for taking picture.</string>
+        </custom-config-file>
+        <custom-config-file platform="ios" target="*-Info.plist">
+            <dict>
+                <key>UIFileSharingEnabled</key>
+                <true />
+            </dict>
+        </custom-config-file>
+        <custom-config-file platform="ios" target="*-Info.plist">
+            <dict>
+                <key>bg1macmini037
+                </key>
+                <true />
+            </dict>
+        </custom-config-file>
+        <custom-config-file parent="NSAppTransportSecurity" platform="ios" target="*-Info.plist">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <false />
+                <key>NSExceptionDomains</key>
+                <dict>
+                    <key>localhost</key>
+                    <dict>
+                        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                        <true />
+                    </dict>
+                    <key>tatatest.resustain.io</key>
+                    <dict>
+                        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                        <true />
+                        <key>NSExceptionMinimumTLSVersion</key>
+                        <string>TLSv1.2</string>
+                        <key>NSExceptionRequiresForwardSecrecy</key>
+                        <true />
+                        <key>NSIncludesSubdomains</key>
+                        <true />
+                        <key>NSRequiresCertificateTransparency</key>
+                        <false />
+                        <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                        <false />
+                        <key>NSThirdPartyExceptionMinimumTLSVersion</key>
+                        <string>TLSv1.2</string>
+                        <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                        <true />
+                    </dict>
+                </dict>
+            </dict>
+        </custom-config-file>
+        <custom-config-file parent="ASWebAuthenticationSessionWebBrowserSupportCapabilities" platform="ios" target="*-Info.plist">
+            <dict>
+                <key>EphemeralBrowserSessionIsSupported</key>
+                <true />
+                <key>IsSupported</key>
+                <true />
+            </dict>
+        </custom-config-file>
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
