@@ -16,7 +16,14 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'audit-module',
+    loadChildren: () => import('./pages/audit-module/audit-module.module').then( m => m.AuditModulePageModule)
   }
+
+
+  
 
 ];
 

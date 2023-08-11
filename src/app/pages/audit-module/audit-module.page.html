@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title >audit_module</ion-title>
+    <ion-buttons slot="start">
+<ion-back-button></ion-back-button>       <!--  this will add the back button to the audit module heading   -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-header>{{data1}}</ion-header> for reference to get the data from data service --> 
+  
+  <ion-card *ngFor="let list of collection">
+    <ion-card-header>
+      <ion-card-title>{{list.title}}</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{list.body}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer>
+      <!-- <ion-button (click)="dashboard()" expand="block">back to dashboard</ion-button> -->
+  </ion-footer>
+</ion-content>
+

@@ -64,6 +64,7 @@ export class DashboardPage implements OnInit {
       }
 
      });
+     
 
     
   }
@@ -96,6 +97,10 @@ export class DashboardPage implements OnInit {
       }
     );
  
+}
+
+addAudit(){
+  this.router.navigate(['/audit-module'])
 }
 
 

@@ -10,11 +10,13 @@
 </ion-header>
 
 <ion-content>
+
   <section style="padding:10px;text-align:center">
     <img style="height:80px" src="assets/img/resusdash.png">
     <p style="font-size:2em;padding:10px;text-align:center" >Welcome to Resustain<br>
     </p>
   </section>
+  <ion-button  (click)="addAudit() " expand="block" >Audit module</ion-button>
   <ion-toolbar>
     <ion-item button (click)="logout()" expand="block">
         <ion-icon name="power"></ion-icon>
