@@ -12,7 +12,7 @@ import {DataService} from "src/app/data.service"
 })
 
 export class AuditModulePage implements OnInit {
-  collection : any
+  collection : any=[];
   collection1 : any
   data1 : string
   // collection : Array<any> = [
@@ -44,9 +44,13 @@ export class AuditModulePage implements OnInit {
 
   ngOnInit() {
     // this.fetchData()
-    this.collection = this.dataservice.getdata().subscribe((data: any) => {
+    this.dataservice.getdata().subscribe((data: any) => {
       this.collection = data;
-    });
+    },
+        (error) => {
+          console.error('Error fetching data:', error);
+        }
+      );
   }
 
   // dashboard(){

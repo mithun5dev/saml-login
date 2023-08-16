@@ -29,6 +29,38 @@ export class LoadingService {
     return await this.loadingController
       .create({
         spinner: 'bubbles',
+        duration: 80000
+      })
+      .then((a) => {
+        a.present().then(() => {
+          if (!this.isLoading) {
+            a.dismiss().then(() =>console.log("abort presenting"));
+          }
+        });
+      });
+  }
+
+  async presentLoadingShort() {
+    this.isLoading = true;
+    return await this.loadingController
+      .create({
+        spinner: 'bubbles',
+        duration: 50000
+      })
+      .then((a) => {
+        a.present().then(() => {
+          if (!this.isLoading) {
+            a.dismiss().then(() =>console.log("abort presenting"));
+          }
+        });
+      });
+  }
+
+  async presentLoadingDelayShort() {
+    this.isLoading = true;
+    return await this.loadingController
+      .create({
+        spinner: 'bubbles',
         duration: 30000
       })
       .then((a) => {

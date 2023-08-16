@@ -5,6 +5,31 @@
 </ion-header>
 
 <ion-content>
-  <ion-button expand="block" class="btn-style" (click)="samlLoginValid()" type="button">Saml Login</ion-button>
-  
+  <form [formGroup]="loginForm" (ngSubmit)="loginData()"   *ngIf="displayLogin" novalidate>
+    <app-errors  *ngIf="invalidCredentials && submitted" [errorMessage]='invalidCred'></app-errors>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <!-- <app-errors *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid"
+      [errorMessage]='invalidEmail'>
+    </app-errors> -->
+ <!-- New login validaton conditions for valid and required. Both email and password -->
+    <div *ngIf="((!loginForm.controls.email.valid || loginForm.controls.email.errors) && submitted)">
+      <div *ngIf="loginForm.controls.email.errors?.required">
+        <app-errors [errorMessage]='invalidEmail'></app-errors>
+      </div>
+    </div>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" clear-on-edit="false" formControlName="password"></ion-input>
+    </ion-item>
+    <div *ngIf="((!loginForm.controls.password.valid || loginForm.controls.password.errors) && submitted)">
+      <div *ngIf="loginForm.controls.password.errors?.required">
+        <app-errors [errorMessage]='invalidPwd'></app-errors>
+      </div>
+    </div>
+    <ion-button expand="block" class="btn-style" type="submit">Log in</ion-button>
+    <ion-button expand="block" class="btn-style" (click)="samlLoginValid()" type="button">Saml Login</ion-button>
+  </form>
 </ion-content>

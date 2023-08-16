@@ -12,12 +12,12 @@ export class DataService implements OnInit {
 
   }
 
-  ngOnInit(): void {
-    this.getdata()
+  ngOnInit() {
+    //this.getdata()
   }
 
   getdata(){
-    return this.http.get('https://jsonplaceholder.typicode.com/posts')
+    return this.http.get('https://tatatest.resustain.io/audit_management.json')
   }
 
 }
