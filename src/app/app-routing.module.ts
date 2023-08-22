@@ -20,11 +20,11 @@ const routes: Routes = [
   {
     path: 'audit-module',
     loadChildren: () => import('./pages/audit-module/audit-module.module').then( m => m.AuditModulePageModule)
+  },
+  {
+    path: 'audit-module/:indicator_id',
+    loadChildren: () => import('./record-listing/record-listing.module').then( m => m.RecordListingPageModule)
   }
-
-
-  
-
 ];
 
 @NgModule({

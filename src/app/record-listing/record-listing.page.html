@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>record_listing</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>       
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <!-- <br>
+  <a href="audit-module" color="brown"> << Back</a>
+  <br>
+   -->
+  <h4>Scheduled Audits for {{name?.indicator?.description |  slice:0:12}} ...</h4>
+
+  <ion-button color="success">Filter</ion-button>
+<br><br>
+
+  <div *ngIf="name?.indicator_records?.length > 0">
+  		 		
+    <thead id="table" >
+      <th  size="2">Test Facility</th>
+      <th size="2">Status</th>
+      <th size="2">Assigned To</th>
+      <th size="2" *ngIf="name?.indicator?.data_capture_frequency == 'ad_hoc'">From Date</th>
+      <th size="2" *ngIf="name?.indicator?.data_capture_frequency == 'ad_hoc'">To Date</th>
+      
+    </thead>
+    <br>
+    <tr *ngFor="let data of collection">
+      <td data-cell="test feciluity" size="2">{{data.org_node_name}}</td>
+      <td data-cell="status" size="2">{{data?.sys_record_state}}</td>
+      <td data-cell="assign to" size="2" *ngFor="let a of data.assigned_to; let last = last"> {{ a | slice : 0:12}}{{ !last ? ', ' : '' }} </td>
+      <td data-cell="from date" size="2" *ngIf="name?.indicator?.data_capture_frequency == 'ad_hoc'">{{data?.start_date | date: 'y'}}</td>
+      <td data-cell="to date" size="2" *ngIf="name?.indicator?.data_capture_frequency == 'ad_hoc'">{{data?.end_date | date: 'y'}}</td>
+    </tr>
+    <ion-infinite-scroll (ionInfinite)="loadmore($event)">
+      <ion-infinite-scroll-content>
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+  <div *ngIf="name?.indicator_records?.length <= 0">
+
+    <p>No data found</p>
+
+  </div>
+
+
+</ion-content>

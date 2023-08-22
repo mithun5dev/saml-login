@@ -11,16 +11,35 @@
 
   <!-- <ion-header>{{data1}}</ion-header> for reference to get the data from data service --> 
   
-  <ion-card *ngFor="let list of collection">
+  <!-- <ion-card *ngFor="let list of collection">
     <ion-card-header>
       <ion-card-title>{{list.name}}</ion-card-title>
-      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+       <ion-card-subtitle>Card Subtitle</ion-card-subtitle> 
     </ion-card-header>
   
     <ion-card-content>
       {{list.description}}
     </ion-card-content>
-  </ion-card>
+
+    <ion-footer>
+      <a href="audit-module/:id">VIEW SCHEDULE</a>
+    </ion-footer> -->
+
+
+    <ion-card *ngFor="let list of collection">
+      <ion-card-header>
+        <ion-card-title>{{list.name}}</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{list.description}}
+      </ion-card-content>
+    
+      <ion-button fill="clear" [routerLink]="[list.id]">VIEW SCHEDULE</ion-button>
+      
+    </ion-card>
+  <!-- </ion-card> -->
 
   <ion-footer>
       <!-- <ion-button (click)="dashboard()" expand="block">back to dashboard</ion-button> -->

@@ -46,6 +46,7 @@ export class AuditModulePage implements OnInit {
     // this.fetchData()
     this.dataservice.getdata().subscribe((data: any) => {
       this.collection = data;
+      console.log(data)
     },
         (error) => {
           console.error('Error fetching data:', error);
